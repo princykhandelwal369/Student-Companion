@@ -13,11 +13,30 @@
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
         </nav>
-        <h1> Hello {{ name }}! </h1>
-        <p> Year: {{ year }} </p>
-        <p> Course: {{ course }} </p>
-        <p> CGPA: {{ cgpa }} </p>
-        <p> This is the Students Companion App</p>
+        
+        <div class="container">
+            <div class="card">
+                <h2>Student Profile</h2>
+                <div class="student-info">
+                    <div class="info-item">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value">{{ name }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">{{ course }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Year:</span>
+                        <span class="info-value">{{ year }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">CGPA:</span>
+                        <span class="info-value">{{ cgpa }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </body>
 </html>
