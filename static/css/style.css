@@ -1,0 +1,87 @@
+/* ==========================================
+   STUDENT COMPANION — Main Stylesheet
+   ========================================== */
+
+/* CSS Variables */
+:root {
+    --bg-primary: #0a1628;
+    --bg-secondary: #112240 ;
+    --bg-card: #1a3a5c;
+    --accent: #4a9eff;
+    --accent-hover: #2980ff;
+    --text-primary: #e8f0fe;
+    --text-secondary: #a8b8d8;
+    --border-radius: 12px;
+    --nav-radius: 50px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* 3. Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* 4. Navbar */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-secondary);
+    padding: 12px 32px;
+    border-radius: var(--nav-radius);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    display: flex;
+    gap: 32px;
+    border: 1px solid rgba(74, 158, 255, 0.15);
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
