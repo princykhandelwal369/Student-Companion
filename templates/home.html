@@ -20,20 +20,48 @@
                 <div class="student-info">
                     <div class="info-item">
                         <span class="info-label">Name:</span>
-                        <span class="info-value">{{ name }}</span>
+                        <span class="info-value">{{ student.name }}</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Course:</span>
-                        <span class="info-value">{{ course }}</span>
+                        <span class="info-value">{{ student.course }}</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">Year:</span>
-                        <span class="info-value">{{ year }}</span>
+                        <span class="info-value">{{ student.year }}</span>
                     </div>
                     <div class="info-item">
                         <span class="info-label">CGPA:</span>
-                        <span class="info-value">{{ cgpa }}</span>
+                        <span class="info-value">{{ student.cgpa }}</span>
                     </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Quick Stats</h2>
+                <div class="student-info">
+                    <div class="info-item">
+                        <span class="info-label">Attendance:</span>
+                        <span class="info-value">{{ stats.attendance }}%</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Pending Assignments:</span>
+                        <span class="info-value">{{ stats.assignments_pending }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Days to exam:</span>
+                        <span class="info-value">{{ stats.days_to_exam }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Today's Schedule</h2>
+                <div class="student-info">
+                    {% for class in schedule %}
+                        <div class="info-item">
+                            <span class="info-label">{{ class.time }}</span>
+                            <span class="info-value">{{ class.subject }} — {{ class.room }}</span>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
